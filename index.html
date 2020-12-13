@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+<script src="script1.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="master/style1.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<body ng-app="body-app" >
+  <div class="top_nav">
+    <img class="logoimg"src="items/logo.png" alt="" height="52.1px" width="172.1px">
+    <div class="search">
+      <input class="search_term"  type="text" placeholder="Search Items..." name="search">
+      <button class="search_butt" type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    <div class="sign">
+    <button class="login" type="button" name="button" onclick="loadLogin()">Log In</button>
+    <button class="signup" type="button" name="button" onclick="loadSignup()" >Sign Up</button>
+    </div>
+  </div>
+  <div class="two">
+    <div class="Left_nav">
+      <h2>Filters</h2>
+      <div class="filter-labels">
+        <input class="cb" type="radio" name="gender" id="cb0" value="" checked>
+        <label for="cb0" value="" >All</label>
+      </div>
+      <div class="filter-labels">
+        <input class="cb" type="radio" name="gender" id="cb3" value="Boys">
+        <label for="cb3"  >Boys</label>
+      </div>
+      <div class="filter-labels">
+        <input class="cb" type="radio" name="gender" id="cb4" value="Girl">
+        <label for="cb4"  >Girls</label>
+      </div>
+      <div class="filter-labels">
+        <input class="cb" type="radio" name="gender" id="cb1" value="Men" >
+        <label for="cb1" >Men</label>
+      </div>
+      <div class="filter-labels">
+        <input class="cb" type="radio" name="gender" id="cb2" value="Women">
+        <label for="cb2"  >Women</label>
+      </div>
+ </div>
+    <div class="feed" ng-controller="display-objects">
+
+      <div class="objs" onclick="loadPage(0)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[0].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[0].name}}</p>
+
+        <div>
+        <p class="price">{{n._item[0].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+      <div class="objs" onclick="loadPage(1)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[1].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[1].name}}</p>
+        <div>
+        <p class="price">{{n._item[1].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+
+      <div class="objs" onclick="loadPage(2)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[2].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[2].name}}</p>
+        <div>
+        <p class="price">{{n._item[2].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+
+      <div class="objs" onclick="loadPage(3)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[3].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[3].name}}</p>
+        <div>
+        <p class="price">{{n._item[3].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+
+      <div class="objs" onclick="loadPage(4)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[4].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[4].name}}</p>
+        <div>
+        <p class="price">{{n._item[4].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+
+      <div class="objs" onclick="loadPage(5)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[5].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[5].name}}</p>
+
+        <div>
+        <p class="price">{{n._item[5].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+      <div class="objs" onclick="loadPage(6)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[6].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[6].name}}</p>
+        <div>
+        <p class="price">{{n._item[6].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+
+      <div class="objs" onclick="loadPage(7)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[7].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[7].name}}</p>
+        <div>
+        <p class="price">{{n._item[7].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+
+      <div class="objs" onclick="loadPage(8)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[8].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[8].name}}</p>
+        <div>
+        <p class="price">{{n._item[8].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+
+      <div class="objs" onclick="loadPage(9)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[9].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[9].name}}</p>
+        <div>
+        <p class="price">{{n._item[9].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+
+      <div class="objs" onclick="loadPage(10)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[10].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[10].name}}</p>
+
+        <div>
+        <p class="price">{{n._item[10].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+      <div class="objs" onclick="loadPage(11)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[11].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[11].name}}</p>
+        <div>
+        <p class="price">{{n._item[11].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+
+      <div class="objs" onclick="loadPage(12)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[12].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[12].name}}</p>
+        <div>
+        <p class="price">{{n._item[12].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+
+      <div class="objs" onclick="loadPage(13)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[13].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[13].name}}</p>
+        <div>
+        <p class="price">{{n._item[13].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+
+      <div class="objs" onclick="loadPage(14)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[14].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[14].name}}</p>
+        <div>
+        <p class="price">{{n._item[14].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+
+      <div class="objs" onclick="loadPage(15)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[15].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[15].name}}</p>
+
+        <div>
+        <p class="price">{{n._item[15].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+      <div class="objs" onclick="loadPage(16)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[16].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[16].name}}</p>
+        <div>
+        <p class="price">{{n._item[16].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+
+      <div class="objs" onclick="loadPage(17)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[17].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[17].name}}</p>
+        <div>
+        <p class="price">{{n._item[17].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+
+      <div class="objs" onclick="loadPage(18)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[18].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[18].name}}</p>
+        <div>
+        <p class="price">{{n._item[18].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+
+      <div class="objs" onclick="loadPage(19)">
+        <div class="img_box">
+         <img class="obj_img"src={{n._item[19].image}} alt="">
+        </div>
+        <p class="info_text">{{n._item[19].name}}</p>
+        <div>
+        <p class="price">{{n._item[19].price | currency:"₹ "}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+$(document).ready(function()
+{
+  if(sessionStorage.getItem("isLoggedin") == null)
+  {
+    sessionStorage.setItem("isLoggedin",false);
+  }
+  var isin = sessionStorage.getItem("isLoggedin").toString();
+  if(isin == 'true')
+  {
+    $('.login').html('Logged In');
+    $('.signup').hide();
+  }
+  else
+  {
+    $('.login').html('Log In');
+    $('.signup').show();
+  }
+
+
+  $('.cb').click(function()
+  {
+    var text1 = $(this).val();
+    $('.objs').hide();
+    $('.objs:contains("'+text1+'")').show();
+  });
+
+ $('.search_butt').click(function()
+ {
+
+  var text = $(".search_term").val();
+  $('.objs').hide();
+  $('.objs:contains("'+text+'")').show();
+
+ });
+});
+var app = angular.module("body-app", []);
+app.controller('display-objects', function($scope)
+{
+  var  objectsJSON =
+
+'{"_item":[{"name":"Girls Long-Sleeve Tunic T-Shirts","price":"420","image":"items/11.jpg"},{"name":"Boys Long-Sleeve Tunic T-Shirts","price":"699","image":"items/21.jpg"},{"name":"Boys Long-Sleeve Sports T-Shirts","price":"499","image":"items/31.jpg"},{"name":"Girls Long-Sleeve Dress","price":"500","image":"items/41.jpg"},{"name":"Boys Gray Hoodie","price":"1299","image":"items/51.jpg"},{"name":"Girls Dress Blue ","price":"455","image":"items/61.jpg"},{"name":"Girls Pink-Blue Dress Sleeve-Less","price":"700","image":"items/71.jpg"},{"name":"Men Shirt White and Blue","price":"1499","image":"items/81.jpg"},{"name":"Men / Boys Yellow Hoodie","price":"1200","image":"items/91.jpg"},{"name":"Women Dress White Blue","price":"899","image":"items/101.jpg"},{"name":"Women / Girls Denim Dress","price":"4200","image":"items/111.jpg"},{"name":"Women Complete Set Dress","price":"1699","image":"items/121.jpg"},{"name":"Women Dress","price":"2999","image":"items/131.jpg"},{"name":"Women / Girls Hoodie","price":"1900","image":"items/141.jpg"},{"name":"Men / Boys Sweatshirt","price":"4000","image":"items/151.jpg"},{"name":"Men / Boys T-Shirts","price":"3000","image":"items/161.jpg"},{"name":"Men Sweatshirt","price":"3200","image":"items/171.jpg"},{"name":"Boys Long-Sleeve T-Shirts Warm","price":"6000","image":"items/181.jpg"},{"name":"Boys American Style Hoodie","price":"4999","image":"items/191.jpg"},{"name":"Men Half-Sleeves T-Shirts","price":"2000","image":"items/201.jpg"}]}';
+
+  var data = JSON.parse(objectsJSON);
+  $scope.n = data;
+});
+</script>
+
+</body>
+</html>

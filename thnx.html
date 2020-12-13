@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+<script src="script1.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="master/style2.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<body ng-app="body-app" >
+  <div class="top_nav">
+    <img class="logoimg"src="items/logo.png" alt="" height="52.1px" width="172.1px">
+
+  </div>
+  <div class="two">
+
+    <div class="feed" ng-controller="display-objects">
+
+      <div class="objs">
+
+        <div class="objs-1">
+          <p class="info_text">Thank You For Shopping With US!</p>
+          <a class="go_bacc" href="index.html">Go Back</a>
+        </div>
+
+    </div>
+
+  </div>
+
+<script>
+$(document).ready(function()
+{
+  $('.cb').click(function()
+  {
+    var text1 = $(this).val();
+    $('.objs').hide();
+    $('.objs:contains("'+text1+'")').show();
+    console.log(text1);
+  });
+
+ $('.search_butt').click(function()
+ {
+
+  var text = $(".search_term").val();
+  $('.objs').hide();
+  $('.objs:contains("'+text+'")').show();
+
+ });
+});
+var app = angular.module("body-app", []);
+app.controller('display-objects', function($scope)
+{
+  var  objectsJSON =
+
+'{"_item":[{"name":"Girls Long-Sleeve Tunic T-Shirts","price":"420","image":"items/11.jpg"},{"name":"Boys Long-Sleeve Tunic T-Shirts","price":"699","image":"items/21.jpg"},{"name":"Boys Long-Sleeve Sports T-Shirts","price":"499","image":"items/31.jpg"},{"name":"Girls Long-Sleeve Dress","price":"500","image":"items/41.jpg"},{"name":"Boys Gray Hoodie","price":"1299","image":"items/51.jpg"},{"name":"Girls Dress Blue ","price":"455","image":"items/61.jpg"},{"name":"Girls Pink-Blue Dress Sleeve-Less","price":"700","image":"items/71.jpg"},{"name":"Men Shirt White and Blue","price":"1499","image":"items/81.jpg"},{"name":"Men / Boys Yellow Hoodie","price":"1200","image":"items/91.jpg"},{"name":"Women Dress White Blue","price":"899","image":"items/101.jpg"},{"name":"Women / Girls Denim Dress","price":"4200","image":"items/111.jpg"},{"name":"Women Complete Set Dress","price":"1699","image":"items/121.jpg"},{"name":"Women Dress","price":"2999","image":"items/131.jpg"},{"name":"Women / Girls Hoodie","price":"1900","image":"items/141.jpg"},{"name":"Men / Boys Sweatshirt","price":"4000","image":"items/151.jpg"},{"name":"Men / Boys T-Shirts","price":"3000","image":"items/161.jpg"},{"name":"Men Sweatshirt","price":"3200","image":"items/171.jpg"},{"name":"Boys Long-Sleeve T-Shirts Warm","price":"6000","image":"items/181.jpg"},{"name":"Boys American Style Hoodie","price":"4999","image":"items/191.jpg"},{"name":"Men Half-Sleeves T-Shirts","price":"2000","image":"items/201.jpg"}]}';
+
+  var data = JSON.parse(objectsJSON);
+  $scope.n = data;
+});
+</script>
+
+</body>
+</html>
